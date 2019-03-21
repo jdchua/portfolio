@@ -1,0 +1,84 @@
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+
+        
+        <script>
+        new fullpage('#fullpage', {
+            // menu: '#myMenu',
+            // afterRender: function(){
+            //   alert("Hello");  
+            // },
+            onLeave: function(origin, destination, direction){
+          		var leavingSection = this;
+          		
+          		if(direction =="down" && origin.index == 0){
+          		  $('#panel').delay(500).fadeIn();
+          		  document.getElementById("navBar").style.height = "100vh";
+              	  document.getElementById("navBar").classList.add("move");
+              	  document.getElementById("navBar").style.transition = "all 0.8s";
+          		}
+      
+          		else if(direction == "up" && origin.index == 1){
+          		  document.getElementById("navBar").style.height = "45px";
+          		  $("#panel").slideUp("slow");
+          		  document.getElementById("navBar").classList.remove("move");
+          		  document.getElementById("navBar").style.transition = "all 0.8s";
+          		}
+          		
+          		else if (direction == "down" && origin.index == 1){
+          		  $(".workInfo").hide();
+          		  $(".bars").hide();
+          		  $(".navTitle").hide();
+          		  $(".navSocial").hide();
+          		  $(".work0").css("display", "block");
+          		  $("#navBar").addClass("full").delay(800).queue(function(next){
+                    $("#navBar").removeClass("full");
+                    $(".bars").delay(500).fadeIn();
+                    $(".navTitle").delay(500).fadeIn();
+                    $(".navSocial").delay(500).fadeIn();
+                    document.getElementById("navBar").classList.add("leftNav");
+                    next();
+                  });
+                  document.getElementById("navBar").style.transition = "all 0.5s";
+                  $(".workInfo").delay(1000).fadeIn();
+          		}
+          		     
+          		else if (direction == "up" && origin.index == 2){
+          		  $(".bars").hide();
+          		  $(".navTitle").hide();
+          		  $(".navSocial").hide();
+          		  $("#navBar").addClass("full").delay(800).queue(function(next){
+                    $("#navBar").removeClass("full");
+                    $(".bars").delay(500).fadeIn();
+                    $(".navTitle").delay(500).fadeIn();
+                    $(".navSocial").delay(500).fadeIn();
+                    document.getElementById("navBar").classList.remove("leftNav");
+                    next();
+                });
+          		  document.getElementById("navBar").style.transition = "all 0.5s"
+          		}
+          	
+          		else if (direction == "down" && origin.index == 2){
+          		    $(".workMore").hide();
+          		    $(".workMore").delay(300).fadeIn();
+          		    $(".workInfo2").css("display", "block");
+          		    document.getElementById("navBar").style.transition = "all 0.5s"
+          		} 
+          		
+          		else if (direction == "up" && origin.index == 3) {
+          		    $(".workInfo").hide();
+                    $(".workInfo").delay(300).fadeIn();
+                    document.getElementById("navBar").style.transition = "all 0.5s"
+          		}
+          		
+          		else if (direction == "up" && origin.index == 4) {
+          		    $(".workMore").hide();
+          		    $(".workMore").delay(300).fadeIn();
+          		    document.getElementById("navBar").style.transition = "all 0.5s"
+          		}
+          	  }
+          });
+        </script>
+    </body>
+</html>
