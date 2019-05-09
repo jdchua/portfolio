@@ -89,7 +89,7 @@
   margin-right: auto;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 585px) {
   .navSocial {
     margin-top: 39vh;
   }
@@ -407,21 +407,22 @@ svg {
 
 .workVisit a:hover {
   color: white;
+  text-decoration: none;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 585px) {
   .workImage::after {
     transform: none;
     content: none;
   }
   
   .workImage img {
-    height: 600px;
+    height: 500px;
     width: 570px;
   }
   
   .workInfo {
-    margin: 50vh 3vw 0vh 25vw;
+    margin: 48vh 3vw 0vh 25vw;
     background: #E8E8E0;
     padding: 10px 0 10px 30px;
   }
@@ -477,10 +478,10 @@ svg {
   background: #E8E8E0;
   z-index:100;
   right: 0;
-  padding: 24vh 0 0 2vw;
+  padding: 20vh 0 0 2vw;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 585px) {
   .workImage::after {
     transform: none;
   }
@@ -491,7 +492,7 @@ svg {
     }
   
   .workInfo2 {
-    margin: 54vh 3vw 0vh 25vw;
+    margin: 42vh 3vw 0vh 25vw;
     background: #E8E8E0;
     padding: 10px 0 10px 30px;
   }
@@ -541,7 +542,7 @@ svg {
   margin-left: auto;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 585px) {
   #email {
     margin-left: 55px;
   }
@@ -589,5 +590,6 @@ svg {
 
 .contact a:hover {
   color: white;
+  text-decoration: none;
 }
 
