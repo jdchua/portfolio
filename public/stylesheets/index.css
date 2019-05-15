@@ -518,13 +518,6 @@ svg {
   }
 }
 
-@media only screen and (min-width: 551px) {
-  .workInfo2 {
-    width: 32%;
-    height: 100%;
-  }
-}
-
 @media only screen and (max-width: 712px) {
     .workImage2 .workVisit a {
       width: 90px;
@@ -533,6 +526,14 @@ svg {
     .workTitle {
       font-size: 1.6em;
     }
+}
+
+
+@media only screen and (min-width: 551px) {
+  .workInfo2 {
+    width: 40%;
+    height: 100%;
+  }
 }
 
 /*Section 4*/
