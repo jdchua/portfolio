@@ -136,7 +136,7 @@
   display: inline-block;
   padding: 40 30;
   margin-bottom: 10px;
-  margin-top: 125px;
+  margin-top: 23vh;
 }
 
 .introCenter img {
@@ -478,7 +478,7 @@ svg {
   background: #E8E8E0;
   z-index:100;
   right: 0;
-  padding: 20vh 0 0 2vw;
+  padding: 26vh 0 0 2vw;
 }
 
 @media only screen and (max-width: 585px) {
